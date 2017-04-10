@@ -13,7 +13,7 @@ install: build
 # used by .travis.yml
 .PHONY: release
 release:
-	curl -d "{ \
+	curl -v -f -d "{ \
 		\"tag_name\": \"v$$(python setup.py --version)\", \
 		\"target_commitish\": \"master\", \
 		\"name\": \"v$$(python setup.py --version)\" \
