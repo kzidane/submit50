@@ -14,7 +14,7 @@ install: build
 .PHONY: release
 release:
 	curl -d "{ \
-		\"tag_name\": \"v$$(python setup.py --version)\",
-		\"target_commitish\": \"master\",
-		\"name\": \"v$$(python setup.py --version)\"
+		\"tag_name\": \"v$$(python setup.py --version)\", \
+		\"target_commitish\": \"master\", \
+		\"name\": \"v$$(python setup.py --version)\" \
 	}" -u kzidanebot:$$GITHUB_TOKEN https://api.github.com/repos/$$TRAVIS_REPO_SLUG/releases
